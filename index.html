@@ -1,75 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Tommy Giroux</title>
 
-<style>
-  body {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-  }
+  <style>
+    body {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-  h2 {
-    margin-top: 40px;
-  }
+    h2 {
+      margin-top: 40px;
+    }
 
-  nav {
-    margin-bottom: 40px;
-  }
+    nav {
+      margin-bottom: 20px;
+    }
 
-  nav a {
-    text-decoration: none;
-    margin-right: 15px;
-  }
-</style>
+    nav a {
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .language-switch {
+      margin-bottom: 40px;
+    }
+
+    .language-switch button {
+      margin-right: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-<nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="cv.pdf">CV</a>
-  <a href="#contact">Contact</a>
-</nav>
- <h1>Tommy Giroux</h1>
 
-<p>
-  Master's student in Mathematics at McGill University
-</p>
+  <h1>Tommy Giroux</h1>
 
-<h2 id="about">About</h2>
-<p>
-  I am a first-year Master's student in Mathematics at McGill University,
-  supervised by Prof. John A. Toth. I received my B.Sc. in Mathematics from
-  Université de Sherbrooke in 2025.
-</p>
+  <div class="language-switch">
+    <button onclick="showEnglish()">English</button>
+    <button onclick="showFrench()">Français</button>
+  </div>
 
-<h2 id="research">Research interests</h2>
-<p>
-  My research interests include spectral geometry, semiclassical analysis,
-  microlocal analysis, and the high-frequency behaviour of eigenfunctions.
-</p>
+  <!-- ENGLISH VERSION -->
+  <div id="english">
 
-<h2 id="notes">Notes and expository writing</h2>
+    <nav>
+      <a href="#about-en">About</a>
+      <a href="#research-en">Research</a>
+      <a href="#notes-en">Notes</a>
+      <a href="cv.pdf">CV</a>
+      <a href="#contact-en">Contact</a>
+    </nav>
 
-<p>
-  <strong>Introduction to Ergodic Theory</strong><br>
-  Expository work completed during a research internship at Université de Sherbrooke.
-  <a href=https://camus-udes.github.io/revue.html>View project</a>
-</p>
+    <p>
+      Master's student in Mathematics at McGill University
+    </p>
 
-  <h2 id="contact">Contact</h2>
-  <p>
-    Email: Tommy2808Giroux@gmail.com
-  </p>
+    <h2 id="about-en">About</h2>
+    <p>
+      I am a first-year Master's student in Mathematics at McGill University,
+      supervised by Prof. John A. Toth. I received my B.Sc. in Mathematics from
+      Université de Sherbrooke in 2025.
+    </p>
+
+    <h2 id="research-en">Research interests</h2>
+    <p>
+      My research interests include spectral geometry, semiclassical analysis,
+      microlocal analysis, and the high-frequency behaviour of eigenfunctions.
+    </p>
+
+    <h2 id="notes-en">Notes and expository writing</h2>
+
+    <p>
+      <strong>Introduction to Ergodic Theory</strong><br>
+      Expository work completed during a research internship at Université de Sherbrooke.
+      <a href="https://camus-udes.github.io/revue.html">View project</a>
+    </p>
+
+    <h2 id="contact-en">Contact</h2>
+    <p>
+      Email: Tommy2808Giroux@gmail.com
+    </p>
+
+  </div>
+
+
+  <!-- FRENCH VERSION -->
+  <div id="french" style="display: none;">
+
+    <nav>
+      <a href="#about-fr">À propos</a>
+      <a href="#research-fr">Recherche</a>
+      <a href="#notes-fr">Notes</a>
+      <a href="cv.pdf">CV</a>
+      <a href="#contact-fr">Contact</a>
+    </nav>
+
+    <p>
+      Étudiant à la maîtrise en mathématiques à l'Université McGill
+    </p>
+
+    <h2 id="about-fr">À propos</h2>
+    <p>
+      Je suis étudiant de première année à la maîtrise en mathématiques à
+      l'Université McGill, sous la direction du professeur John A. Toth.
+      J'ai obtenu mon baccalauréat en mathématiques à l'Université de Sherbrooke
+      en 2025.
+    </p>
+
+    <h2 id="research-fr">Intérêts de recherche</h2>
+    <p>
+      Mes intérêts de recherche comprennent la géométrie spectrale,
+      l'analyse semi-classique, l'analyse microlocale et le comportement
+      à haute fréquence des fonctions propres.
+    </p>
+
+    <h2 id="notes-fr">Notes et travaux de vulgarisation</h2>
+
+    <p>
+      <strong>Introduction à la théorie ergodique</strong><br>
+      Travail de vulgarisation réalisé dans le cadre d'un stage de recherche
+      à l'Université de Sherbrooke.
+      <a href="https://camus-udes.github.io/revue.html">Voir le projet</a>
+    </p>
+
+    <h2 id="contact-fr">Contact</h2>
+    <p>
+      Courriel : Tommy2808Giroux@gmail.com
+    </p>
+
+  </div>
+
+
+  <script>
+    function showEnglish() {
+      document.getElementById("english").style.display = "block";
+      document.getElementById("french").style.display = "none";
+      document.documentElement.lang = "en";
+    }
+
+    function showFrench() {
+      document.getElementById("english").style.display = "none";
+      document.getElementById("french").style.display = "block";
+      document.documentElement.lang = "fr";
+    }
+  </script>
 
 </body>
 </html>
